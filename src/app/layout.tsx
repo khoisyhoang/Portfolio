@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from 'next-themes'
+import { ThemeProvider } from "next-themes";
+import Navbar from "./layouts/NavBar/NavBar";
+import WrapperSection from "./layouts/WrapperSection";
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const beVietnamPro = Be_Vietnam_Pro({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -26,10 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className={`${beVietnamPro.className} antialiased`}>
+        <ThemeProvider attribute="class">
+          <Navbar />
+          <WrapperSection>{children}</WrapperSection>
+        </ThemeProvider>
       </body>
     </html>
   );
