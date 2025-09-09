@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20 relative mx-auto">
+    <section className="min-h-screen flex items-center justify-center px-4 py-20 relative mx-auto" id="about">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         {/* Animated gradient orbs */}
@@ -49,7 +49,7 @@ export default function Hero() {
             {/* Name with pronunciation */}
             <div className="space-y-2">
               <h2 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 via-cyan-600 to-blue-600 dark:from-white dark:via-cyan-400 dark:to-blue-400 bg-clip-text text-transparent leading-tight">
-                Khoi
+                Khoi 
               </h2>
               <div className="flex items-center gap-3 text-lg md:text-xl text-gray-500 dark:text-gray-400">
                 <span className="font-mono bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-sm">
