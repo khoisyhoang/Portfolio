@@ -24,7 +24,7 @@ const socials = [
 export default function Social() {
   return (
     <>
-      <div className={`hidden md:flex`}>
+      <div className={`hidden lg:flex`}>
         <ul
           className={`flex flex-row justify-between items-center lg:gap-5 gap-3`}
         >
@@ -43,11 +43,11 @@ export default function Social() {
           <ThemeChanger />
         </ul>
       </div>
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <DropdownMenu>
-          <DropdownMenuTrigger className="flex items-center gap-2 sm:px-3 px-1 sm:py-2 py-1 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50 hover:bg-accent hover:text-accent-foreground transition-all duration-200 outline-none focus:outline-none ">
+          <DropdownMenuTrigger className="flex items-center gap-2 md:px-3 px-1 md:py-2 py-1 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50 hover:bg-accent hover:text-accent-foreground transition-all duration-200 outline-none focus:outline-none ">
             <HiOutlineShare className="w-4 h-4" />
-            <span className="text-xs font-medium">Connect</span>
+            <span className="text-xs font-medium">Contact</span>
             <FiChevronDown className="w-3 h-3 transition-transform duration-200 group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
           <DropdownMenuContent 
