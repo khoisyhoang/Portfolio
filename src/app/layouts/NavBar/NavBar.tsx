@@ -23,7 +23,7 @@ const Navbar = () => {
               font-medium"
             >
               <div className="lg:text-2xl sm:text-xl text-sm">
-                {"<Khoi Hoang/>"}
+                {"Khoi Hoang"}
               </div>
             </Link>
           </div>

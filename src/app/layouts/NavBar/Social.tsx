@@ -13,12 +13,12 @@ import ThemeChanger from "./ThemeChanger";
 
 const socials = [
   {
-    title: "LinkedIn",
+    title: "",
     href: "https://linkedin.com/in/khoisyhoang",
     icon: FaLinkedin,
   },
-  { title: "Github", href: "https://github.com/khoisyhoang", icon: FaGithub },
-  { title: "Email", href: "mailto:khoisyhoang@gmail.com", icon: FiMail },
+  { title: "", href: "https://github.com/khoisyhoang", icon: FaGithub },
+  { title: "", href: "mailto:khoisyhoang@gmail.com", icon: FiMail },
 ];
 
 export default function Social() {
@@ -30,7 +30,7 @@ export default function Social() {
         >
           {socials.map((social) => (
             <Link
-              key={social.title}
+              key={social.href}
               href={social.href}
               target="_blank"
               className={` flex flex-row align-center justify-center items-center decoration-none  hover:text-cyan-500 `}
@@ -61,7 +61,7 @@ export default function Social() {
             <DropdownMenuSeparator className="my-1 bg-border/50" />
             {socials.map((social) => (
               <DropdownMenuItem 
-                key={social.title}
+                key={social.href}
                 className="p-0 focus:bg-accent/50 rounded-lg transition-colors duration-150"
                 asChild
               >

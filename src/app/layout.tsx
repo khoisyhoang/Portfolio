@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Navbar from "./layouts/NavBar/NavBar";
 import WrapperSection from "./layouts/WrapperSection";
+import Hero from "./components/Hero";
 
 const beVietnamPro = Be_Vietnam_Pro({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={`${beVietnamPro.className} antialiased`}>
         <ThemeProvider attribute="class">
           <Navbar />
+          <Hero />
           <WrapperSection>{children}</WrapperSection>
         </ThemeProvider>
       </body>
