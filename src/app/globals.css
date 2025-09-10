@@ -80,6 +80,10 @@ body {
   background-position: 0 0;
 }
 
+/* canvas {
+  width: 100px;
+  height: 100px;
+} */
 /* [data-theme="dark"] {
   background-image: url("/images/noise.png");
   background-size: 200px 200px;
