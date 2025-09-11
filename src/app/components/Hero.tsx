@@ -70,7 +70,7 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 pt-4">
             <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-full font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/25 hover:scale-105 overflow-hidden">
-              <span className="relative z-10">Let's Connect</span>
+              <span className="relative z-10">Resume / CV</span>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
 
@@ -105,7 +105,7 @@ export default function Hero() {
             {/* Floating elements */}
             <div className="absolute -top-4 -right-2 w-14 h-14 rounded-full animate-float delay-500">
               <Image
-                src="/images/skills/react-icon.svg"
+                src="/images/skills/react.svg"
                 alt="React"
                 fill
                 className=""
@@ -114,7 +114,7 @@ export default function Hero() {
             </div>
             <div className="absolute top-1/4 -left-8 w-16 h-16 rounded-full animate-float delay-1000">
               <Image
-                src="/images/skills/nextjs-icon.svg"
+                src="/images/skills/nextjs.svg"
                 alt="Nextjs"
                 fill
                 className=""
@@ -123,7 +123,7 @@ export default function Hero() {
             </div>
             <div className="absolute -bottom-8   left-1/2 w-12 h-12 rounded-full animate-float delay-2000">
               <Image
-                src="/images/skills/nodejs-icon.svg"
+                src="/images/skills/nodejs.svg"
                 alt="Nodejs"
                 fill
                 className=""
