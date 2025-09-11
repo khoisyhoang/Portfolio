@@ -1,25 +1,9 @@
-"use client";
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import TypedAnimation from "../animations/Typed";
+
 const words = ["things", "experiences", "solutions", "dreams"];
 
-
 export default function Hero() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-
-  
-
-  useEffect(() => {
-    setIsVisible(true);
-
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prev) => (prev + 1) % words.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section
@@ -38,11 +22,7 @@ export default function Hero() {
 
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
-        <div
-          className={`space-y-8 transition-all duration-1000 transform ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
+        <div className="space-y-8 animate-fade-in-up">
           {/* Greeting */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
@@ -69,11 +49,11 @@ export default function Hero() {
 
           {/* Dynamic tagline */}
           <div className="space-y-4">
-            <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed container-snap">
               I love building{" "}
               <span className="relative inline-block">
                 <span
-                  className="bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent font-semibold animate-fade-in"
+                  className="bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent font-semibold animate-fade-in no-scrollbar"
                 >
                   <TypedAnimation strings={words}/>
                 </span>
@@ -101,11 +81,7 @@ export default function Hero() {
         </div>
 
         {/* Avatar Section */}
-        <div
-          className={`flex justify-center lg:justify-end transition-all duration-1000 delay-300 transform ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
+        <div className="flex justify-center lg:justify-end animate-fade-in-up animation-delay-300">
           <div className="relative group">
             {/* Animated rings */}
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 animate-spin-slow opacity-75 blur-sm scale-110"></div>
@@ -114,13 +90,13 @@ export default function Hero() {
             {/* Avatar container */}
             <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl group-hover:scale-105 transition-transform duration-500">
               {/* Profile Image */}
-              <Image
+              {/* <Image
                 src="/images/profilepicture.JPG"
                 alt="Khoi Hoang - Full Stack Developer"
                 fill
                 className="object-cover object-top-right"
                 priority
-              />
+              /> */}
 
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -159,7 +135,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
         <div className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2 animate-pulse"></div>
         </div>

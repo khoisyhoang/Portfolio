@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "tailwindcss/utilities";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -15,6 +16,11 @@
 
 @keyframes fade-in {
   0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
@@ -44,6 +50,16 @@
 
 .animate-fade-in {
   animation: fade-in 0.5s ease-out;
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fade-in-up 1s ease-out forwards;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
 }
 
 .animate-expand {
@@ -230,3 +246,25 @@ body {
     @apply bg-background text-foreground;
   }
 } */
+
+/* Disable Horizontal Scrollbar */
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+ /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+}
+
+/* Hide horizontal scrollbar globally */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
