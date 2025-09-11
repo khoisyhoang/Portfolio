@@ -5,7 +5,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuSeparator,
   DropdownMenuPortal,
-} from "@radix-ui/react-dropdown-menu";
+} from "@/components/ui/dropdown-menu";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiMail, FiChevronDown } from "react-icons/fi";
@@ -18,8 +18,16 @@ const socials = [
     href: "https://linkedin.com/in/khoisyhoang",
     icon: FaLinkedin,
   },
-  { title: "Github", href: "https://github.com/khoisyhoang", icon: FaGithub },
-  { title: "Email", href: "mailto:khoisyhoang@gmail.com", icon: FiMail },
+  {
+    title: "Github",
+    href: "https://github.com/khoisyhoang",
+    icon: FaGithub,
+  },
+  {
+    title: "Email",
+    href: "mailto:khoisyhoang@gmail.com",
+    icon: FiMail,
+  }
 ];
 
 export default function Social() {
