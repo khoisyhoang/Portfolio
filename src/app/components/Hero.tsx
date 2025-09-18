@@ -90,13 +90,13 @@ export default function Hero() {
             {/* Avatar container */}
             <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl group-hover:scale-105 transition-transform duration-500">
               {/* Profile Image */}
-              {/* <Image
+              <Image
                 src="/images/profilepicture.JPG"
                 alt="Khoi Hoang - Full Stack Developer"
                 fill
-                className="object-cover object-top-right"
+                className="object-cover object-top"
                 priority
-              /> */}
+              />
 
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
