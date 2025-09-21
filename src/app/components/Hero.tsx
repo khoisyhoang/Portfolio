@@ -7,7 +7,7 @@ export default function Hero() {
 
   return (
     <section
-      className="min-h-screen flex items-center justify-center px-4 py-20 relative mx-auto"
+      className="flex items-center justify-center px-4 pt-10 pb-0 relative mx-auto my-auto min-h-[calc(100vh-100px)]"
       id="about"
     >
       {/* Background Elements */}
@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-10"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl mx-20 grid lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div className="space-y-8 animate-fade-in-up">
           {/* Greeting */}
@@ -135,11 +135,11 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
+      {/* <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
         <div className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2 animate-pulse"></div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
