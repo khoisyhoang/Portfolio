@@ -48,7 +48,7 @@ export default function Experience() {
 
 
   return (
-    <section className="py-12 relative" id="experience" aria-labelledby="experience-heading">
+    <section className="relative" id="experiences" aria-labelledby="experience-heading">
       <div className="mx-auto">
         {/* Section Header */}
         <div className="mb-8 flex items-center">
