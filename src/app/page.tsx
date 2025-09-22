@@ -3,7 +3,7 @@ import TypedAnimation from "./animations/Typed";
 import Skills from "./components/Skills";
 import dynamic from 'next/dynamic';
 
-// Dynamically import Projects component with loading state
+// Dynamically import components with loading states
 const Projects = dynamic(() => import('./components/Projects'), {
   loading: () => (
     <div className="py-12 px-4 relative flex items-center justify-center">
@@ -12,6 +12,22 @@ const Projects = dynamic(() => import('./components/Projects'), {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
           {[...Array(4)].map((_, i) => (
             <div key={i} className="h-40 bg-gray-100 dark:bg-gray-800 rounded-md"></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  ),
+  ssr: true
+});
+
+const Experience = dynamic(() => import('./components/Experience'), {
+  loading: () => (
+    <div className="py-12 px-4 relative flex items-center justify-center">
+      <div className="animate-pulse flex flex-col items-center space-y-4">
+        <div className="h-8 w-32 bg-gray-200 dark:bg-gray-700 rounded"></div>
+        <div className="space-y-8 w-full max-w-6xl">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="h-24 bg-gray-100 dark:bg-gray-800 rounded-md"></div>
           ))}
         </div>
       </div>
@@ -29,6 +45,7 @@ export default function Home() {
   return (
     <>
       <Projects/>
+      <Experience/>
       <Skills/>
     </>
   );
